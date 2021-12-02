@@ -1,14 +1,28 @@
-html{
-    margin: 0;
-    padding: 0;
-    width: 100vw;
+/**{
+    background: #000 !important;
+    outline: solid #f00 1px !important;
+}*/
+
+html,
+body{
+    width: 100%;
+    height: max-content;
+    max-width: 100vw;
+    box-sizing: border-box;
+    max-height: max-content;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-image: url('./images/endless-constellation.svg');
+    background-size: cover;
 }
 
-body{
+
+/*{
     font-size: 16px;
     max-width: 100vw;
-    max-height: max-content;
-}
+    
+}*/
 
 .container{
     display: flex;
@@ -21,15 +35,16 @@ body{
 /*Header section Styling*/
 .header{
     position: fixed;
+    top: 0px;
     display: flex;
     justify-content: left;
     align-items: center;
     width: 100vw;
     height: 7vh;
-    background-color: #1d1d1d;
+    background-color: #110c11;
     color: white;
     box-shadow: 0px 4px 10px rgb(0, 0, 0);
-    z-index: 2;
+    z-index: 5;
   }  
 .header h2 {
     font-size: 20px;
@@ -42,8 +57,8 @@ body{
 .intro{
     width: 100vw;
     height: 100vh;
-    background-image: url();
-    background-color: #1d1d1d;
+    /*background-image: url("./images/wavey-fingerprintBW.svg");*/
+    /*background-color: #1d1d1d;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,23 +74,29 @@ body{
 }
 .intro .introduction p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 25px;
 }
 .be-heavy{
     color: rgb(197, 197, 118);
 }
-#my-image{
-    position: absolute;
-    margin: 17.5vh auto 0;
-    max-width: 100%;
-    max-height: 150%;
-    opacity: 0.4;
-}
 
-.projects-link{
+/*Button to Projects*/
+div.projects-link{
     width: 50vw;
     height: 8vh;
-    background-color: black;
-    border: 1px white;
+    background-color: rgb(88, 25, 25);
+    border: 2px solid rgb(160, 48, 48);
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px;
+    opacity: 0.8;
+    z-index: 1;
+}
+div.projects-link:hover {
+    width: 50vw;
+    height: 8vh;
+    background-color: rgb(47, 21, 48);
+    border: 2px solid rgb(202, 181, 181);
     border-radius: 50px;
     text-align: center;
     padding: 5px;
@@ -87,38 +108,53 @@ body{
     color: white;
     font-family: Tahoma, sans-serif;
 }
+.projects-link #pointer{
+    height: 16px;
+    width: 16px;
+    position: relative;
+    top: -6.5px;
+    background-color: white;
+    border-radius: 50%;
+}
+.projects-link #pointer:hover{
+    height: 16px;
+    width: 16px;
+    position: relative;
+    top: -6.5px;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(90deg);
+}
 
 /*About section Styling*/
 .about{
     height: 50vh;
     width: 100vw;
-    background-color: #858585;
+    /*background-color: #858585;*/
+    background-image: url("./images/wavey-fingerprint.svg");
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: start;
 }
-.about::before {
-    content: ' ';
-    display: block;
+#my-image{
     position: absolute;
-    left: 31%;
-    top: 101%;
-    width: 90vw;
-    height: 50.3%;
+    top: 53.5vh;
+    left: 25vw;
+    margin: 17.5vh auto 0;
+    width: 75%;
+    height: 45%;
     opacity: 0.8;
-    background-image: url("./images/black-gypsum-panel-with-copy-space.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: 50vw;
-  }
-  .about h2{
+    z-index: 0;
+}
+
+.about h2{
       z-index: 2;
-      color: rgb(39, 30, 121);
+      color: rgb(236, 234, 255);
       font-size: 28px;
       font-family: cursive;
   }
-  .about-text{
+.about-text{
       padding: 5%;
       z-index: 2;
       color: rgb(226, 223, 223);
@@ -129,13 +165,14 @@ body{
 
 /*Projects section Styling*/
 .projects {
+    padding-top: 15%;
     height: auto;
     width: 100vw;
     padding-bottom: 5vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: rgb(29, 24, 41);
+    /*background-color: rgb(29, 24, 41);*/
     color: white;
 }
 .projects h1{
