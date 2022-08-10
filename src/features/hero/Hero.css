@@ -1,0 +1,63 @@
+main {
+  background-color: #e3d0a0;
+  height: max-content;
+  min-height: max-content;
+}
+
+main #introText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 3.5rem;
+}
+
+.introText {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 60px;
+}
+
+main #nameTitle{
+  /*animation: move-forever 1s cubic-bezier(.55,.5,.45,.5) 1;*/
+
+}
+
+.projectImageDiv{
+  overflow-y: hidden !important;
+}
+
+.myImage {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  width: 40.5%;
+  height: 45%;
+  z-index: 1;
+}
+
+.myImageContainer {
+  position: fixed;
+  bottom: -10%;
+  left: -10%;
+  width: 100vw;
+  height: max-content;
+  border-radius: 50px;
+}
+
+main img#swingingGif {
+  min-height: 30%;
+  min-width: 100%;
+}
+
+/* @keyframes move-forever {
+  0% {
+   transform: translate3d(-100px,0,0);
+  }
+  80% { 
+    transform: translate3d(1000px,0,0);
+  }
+  100% {
+    font-size: larger;
+  }
+} */
