@@ -1,5 +1,5 @@
 main {
-  background-color: #e3d0a0;
+  
   height: max-content;
   min-height: max-content;
 }
@@ -19,7 +19,24 @@ main #introText {
 }
 
 main #nameTitle{
-  /*animation: move-forever 1s cubic-bezier(.55,.5,.45,.5) 1;*/
+  /*animation: move-forever 1s cubic-bezier(.55,.5,.45,.5) 1;
+  {/**Moon *}
+  <img 
+  id='moonImage'
+  src={moon} 
+  alt='moonImage'
+  //style={{backgroundImage: `url(${moon})`, backgroundSize: 'contain', backgroundPosition: 'cover', backgroundRepeat: 'no-repeat'}}
+  className=' absolute z-0 '
+/>
+<div className='w-full md:w-1/3 md:mx-auto'>
+<img 
+  id='sunImage' 
+  src={sunImage} 
+  alt='sunImage'
+  className='hidden absolute h-40 animate-pulse w-40 top-40 left-40'
+/>
+<div className='' style={{width:"90%", height: 0, paddingBottom:"118%", position: 'relative'}}><iframe className='animate__animated animate__flip top-20 left-8' src="https://giphy.com/embed/Gm3N6JD6AQcDkbPd4l" title='runner' width="50%" height="50%" style={{position: 'absolute'}} frameBorder="0"></iframe></div>
+  */
 
 }
 
@@ -46,11 +63,12 @@ main #nameTitle{
 }
 
 main img#swingingGif {
+  /*animation: move-forever 1s cubic-bezier(.55,.5,.45,.5) infinite;*/
   min-height: 30%;
   min-width: 100%;
 }
 
-/* @keyframes move-forever {
+@keyframes move-forever {
   0% {
    transform: translate3d(-100px,0,0);
   }
@@ -60,4 +78,4 @@ main img#swingingGif {
   100% {
     font-size: larger;
   }
-} */
+}
