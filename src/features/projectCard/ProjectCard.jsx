@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-
-
 function ProjectCard(props) {
 
     return (

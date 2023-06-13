@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import myPic from "../../assets/me.png";
 
 const Profile = ({title, darkMode}) => {

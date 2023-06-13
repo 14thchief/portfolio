@@ -1,5 +1,4 @@
 
-
 const CustomModal = ({ title, children, hideModal, width }) => {
   return (
     <>
