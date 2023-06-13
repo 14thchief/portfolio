@@ -9,6 +9,8 @@ import galaxy from '../../assets/galaxy.jpg';
 import nightBG from '../../assets/nightBG.svg';
 import tree from '../../assets/tree.svg'
 import ProjectCard from '../projectCard/ProjectCard';
+import Profile from '../profile/Profile';
+import CustomModal from '../../components/CustomModal/CustomModal';
 //import projectList from './projectList';
 const projectList = [
   {
@@ -48,9 +50,9 @@ const projectList = [
   },
 ];
 
-export function Hero({isDarkMode: darkMode}) {
+export function Hero({isDarkMode: darkMode, showModal, setShowModal}) {
   /** COMPONENT MOUNT */
-
+  
   // HEADER TITLE
   const [title, setTitle] = useState("Victor Izu-Akiti");
   const titleHead = title.split("").slice(0,1).join("");
@@ -113,7 +115,7 @@ export function Hero({isDarkMode: darkMode}) {
         </div>
         
         {/* <small>Wanna take a quick quiz to know if we are a match?</small> */}
-        <small className={`${!darkMode? "text-black" : "text-gray-400"}`}><b>Here to hang around?</b></small>
+        <small className={`${!darkMode? "text-gray-70" : "text-gray-400"}`}><b>Here to hang around?</b></small>
         <div className='w-full'>
           {/* <button className='underline'>Yeah, Let's have some fun</button> */}
           <button onClick={onClickShowProjects} className='w-11/12 hover:scale-105 md:w-1/4 rounded bg-slate-900 text-slate-200 p-2 m-2'>No, Show Projects</button>
@@ -133,6 +135,9 @@ export function Hero({isDarkMode: darkMode}) {
           }
         </div>
       </section>
+      {showModal && <section> 
+        <CustomModal width={50} title={"Quick Profile"} children={<Profile title={title} darkMode={darkMode} />} hideModal={()=>{setShowModal(false)}} />
+      </section>}
     </main>
   );
 }

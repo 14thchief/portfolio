@@ -26,6 +26,29 @@
   color: rgb(112, 76, 182);
 }
 
+/* register scrooll  */
+
+/*
+ *  scroll bar style
+ */
+
+.register-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.register-scroll::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+}
+
+.register-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+background: #012063;
+}
+
 @keyframes App-logo-float {
   0% {
     transform: translateY(0);
