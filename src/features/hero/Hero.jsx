@@ -1,12 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 
 import './Hero.css';
 import 'animate.css';
-import swingGif from '../../assets/swingGif.gif';
-import sunImage from '../../assets/sunImage.png';
-import galaxy from '../../assets/galaxy.jpg';
-import nightBG from '../../assets/nightBG.svg';
 import tree from '../../assets/tree.svg'
 import ProjectCard from '../projectCard/ProjectCard';
 import Profile from '../profile/Profile';
@@ -54,7 +49,7 @@ export function Hero({isDarkMode: darkMode, showModal, setShowModal}) {
   /** COMPONENT MOUNT */
   
   // HEADER TITLE
-  const [title, setTitle] = useState("Victor Izu-Akiti");
+  const title = "Victor Izu-Akiti";
   const titleHead = title.split("").slice(0,1).join("");
   const titleBody = title.split("").slice(1, title.length).join("");
 
@@ -80,7 +75,7 @@ export function Hero({isDarkMode: darkMode, showModal, setShowModal}) {
     }
 
     console.log({ Ypos, x, y, inProjectsPosition })
-  }, [Ypos])
+  }, [Ypos, inProjectsPosition])
 
 
   /** ACTIONS */
